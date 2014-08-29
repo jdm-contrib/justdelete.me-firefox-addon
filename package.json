@@ -1,7 +1,6 @@
 {
-  "name": "justdeleteme",
-  "title": "justdeleteme",
-  "fullName": "JustDeleteMe",
+  "name": "JustDelete.Me",
+  "title": "Where to delete an account",
   "id": "jid1-ymnT6NasWMIKTQ",
   "description": "Provides link in the omnibar to where to delete account and informs you how hard it is to delete your account.",
   "license": "MPL 2.0",
