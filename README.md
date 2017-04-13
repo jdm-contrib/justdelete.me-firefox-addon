@@ -28,3 +28,6 @@ Once you have added the dependency you can [download this add-on](https://github
 
 If you'd like to help this extension by adding a few lines of code, fork https://github.com/alaouy/justdelete.me-firefox-addon and send a pull request.
 
+## Author
+
+**Mustapha Alaouy** - [Github](https://github.com/alaouy)
