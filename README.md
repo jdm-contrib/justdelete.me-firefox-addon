@@ -2,7 +2,7 @@
 
 Provides link on a site to where to delete account and informs you how hard it is to delete your account.
 
-Information about how to delete account is pulled daily from JustDelete.me ( http://justdelete.me/ ). 
+Information about how to delete an account is pulled daily from JustDelete.me ( http://justdelete.me/ ). 
 
 This extension will add a traffic light icon to your urlbar indicating the difficulty in removing an account on the website you're visiting is.
 
@@ -12,7 +12,7 @@ Upon clicking this icon you will be taken to the page which you can delete your 
 * Green - Simple process
 * Yellow - Some extra steps involved
 * Red - Cannot be fully deleted without contacting customer-services
-* Block - Cannot be deleted
+* Black - Cannot be deleted
 
 
 ## How to build
