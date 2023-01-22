@@ -1,33 +1,18 @@
-# JustDelete.me Firefox Addon
+# JustDeleteMe Extension
 
-Provides link on a site to where to delete account and informs you how hard it is to delete your account.
+[![Firefox Extension Link](https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/en-US/firefox/addon/justdeleteme/)
 
-Information about how to delete an account is pulled daily from JustDelete.me ( http://justdelete.me/ ). 
+Unofficial extension of JustDeleteMe for Firefox-based browsers.
 
-This extension will add a traffic light icon to your urlbar indicating the difficulty in removing an account on the website you're visiting is.
+**This extension is new, there may be some minor quirks or bugs.**  If you find any, create an issue on this GitHub repository.
 
-Upon clicking this icon you will be taken to the page which you can delete your account.
+Since this uses manifest v2, it is currently not compatible with Chromium-based browsers, but
+there is [already an extension for that](https://chrome.google.com/webstore/detail/just-delete-me/hfpofkfbabpbbmchmiekfnlcgaedbgcf) by Mike Rogers.
 
-## Colour Key:
-* Green - Simple process
-* Yellow - Some extra steps involved
-* Red - Cannot be fully deleted without contacting customer-services
-* Black - Cannot be deleted
+## Building
 
+Clone this repository, then run `web-ext build`.
 
-## How to build
+You can install web-ext from npm: `npm i -g web-ext`
 
-This add-on uses [Mozilla's Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK). Download that and [install it](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Installation) accordingly.
-
-When you have installed the Add-on SDK you need to add the dependencies for this add-on. We need the [Urlbar Button module](https://github.com/voxpelli/moz-urlbarbutton) and the [ShowForPage module](https://github.com/voxpelli/moz-showforpage) so download those and add it to a packages/-folder within this addon - this is the way you add [third party modules](https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/adding-menus.html) that an add-on uses.
-
-Once you have added the dependency you can [download this add-on](https://github.com/alaouy/justdelete.me-firefox-addon) itself and run it and build it the way you like. Check the Add-on SDK [Getting Started tutorial](https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials) to find out how that is done.
-
-
-## Contributing
-
-If you'd like to help this extension by adding a few lines of code, fork https://github.com/alaouy/justdelete.me-firefox-addon and send a pull request.
-
-## Author
-
-**Mustapha Alaouy** - [Github](https://github.com/alaouy)
+Install the .zip file that is generated in `web-ext-artifacts`.
