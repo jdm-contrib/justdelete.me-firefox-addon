@@ -22,6 +22,9 @@ there is [already an extension for that](https://chrome.google.com/webstore/deta
 
 ## Building
 
+First, make sure you have [NodeJS installed](https://nodejs.org) on your system, as you will
+need it to download the build tools.
+
 Install web-ext through NPM: `npm i -g web-ext`
 
 Clone this repository: `git clone https://github.com/jdm-contrib/justdelete.me-firefox-addon`, then run `web-ext build`
