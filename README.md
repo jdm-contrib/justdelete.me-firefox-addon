@@ -5,8 +5,7 @@ This extension provides details on how to delete your accounts for websites, alo
 
 The extension icon will change depending on the difficulty, ranging from easy to impossible.
 
-## Download
-You can download the add-on below:
+## Difficulties
 
 * Green (Easy) - Easy to delete your account (usually just by clicking a link and entering your password).
 * Yellow (Medium) - Moderately difficult (usually requires users to confirm their email before deleting their account).
