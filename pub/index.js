@@ -90,7 +90,7 @@ const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myacc
             const notes = searchForSite(base, "notes");
             
             if(notes)
-                document.getElementById("message").innerText = `Notes: ${notes}`;
+                document.getElementById("message").innerHTML = `Notes: ${notes}`;
             else
                 document.getElementById("message").innerText = `There are no notes for this website.`;
         } catch(e) {
