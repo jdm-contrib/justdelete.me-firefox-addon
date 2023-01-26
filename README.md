@@ -5,7 +5,9 @@ This extension provides details on how to delete your accounts for websites, alo
 The extension icon will change depending on the difficulty, ranging from easy to impossible.
 
 ## Download
-You can download the extension [![at this link](https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/en-US/firefox/addon/justdeleteme/).
+You can download the add-on below:
+
+<a href="https://addons.mozilla.org/en-US/firefox/addon/justdeleteme/"><img src="https://raw.githubusercontent.com/alexanderepolite/justdelete.me-firefox-addon/master/firefox_addon_image.png" alt="Download for Firefox"></a>
 
 ## Difficulties
 
