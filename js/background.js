@@ -1,7 +1,8 @@
 
 const data_url = "https://raw.githubusercontent.com/jdm-contrib/jdm/master/_data/sites.json";
 
-//taken from https://github.com/jdm-contrib/justdelete.me-firefox-addon/blob/master/lib/main.js
+//since some websites use different subdomains for deleting accounts,
+//the extension should check for them here.
 const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myaccount', 'meta', 'help', 'support', 'edit'];
 
 (async () => {
@@ -13,9 +14,8 @@ const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myacc
     /**
      * Set the icon.
      *
-     * @param icon {"easy" | "medium" | "hard" | "impossible" | "unknown"}
+     * @param icon {"easy" | "medium" | "hard" | "impossible" | "limited" | "unknown"}
      * @param windowId {number} the current ID of the window.
-     * @returns {void}
      */
     function setIcon(icon, windowId) {
         
@@ -39,8 +39,6 @@ const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myacc
     /**
      * Get the hostname from a URL.
      * 
-     * Parodied from https://github.com/jdm-contrib/justdelete.me-firefox-addon/blob/master/lib/main.js
-     * 
      * @param url {string} the URL.
      * @returns {string} the hostname.
      */
@@ -58,7 +56,7 @@ const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myacc
      * Search for the site and return the difficulty
      * 
      * @param domain {string}
-     * @returns {"easy" | "medium" | "hard" | "impossible" | undefined} the difficulty, or undefined if there is none.
+     * @returns {"easy" | "medium" | "hard" | "impossible" | "limited" | undefined} the difficulty, or undefined if there is none.
      */
     function searchForSite(domain) {
         for(const site of json) {
