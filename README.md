@@ -1,4 +1,5 @@
 # JustDeleteMe Extension
+<a href="https://addons.mozilla.org/en-US/firefox/addon/justdeleteme/"><img src="https://raw.githubusercontent.com/alexanderepolite/justdelete.me-firefox-addon/master/firefox_addon_image.png" alt="Download for Firefox"></a>
 
 This extension provides details on how to delete your accounts for websites, along with how difficult it is.
 
@@ -6,10 +7,6 @@ The extension icon will change depending on the difficulty, ranging from easy to
 
 ## Download
 You can download the add-on below:
-
-<a href="https://addons.mozilla.org/en-US/firefox/addon/justdeleteme/"><img src="https://raw.githubusercontent.com/alexanderepolite/justdelete.me-firefox-addon/master/firefox_addon_image.png" alt="Download for Firefox"></a>
-
-## Difficulties
 
 * Green (Easy) - Easy to delete your account (usually just by clicking a link and entering your password).
 * Yellow (Medium) - Moderately difficult (usually requires users to confirm their email before deleting their account).
