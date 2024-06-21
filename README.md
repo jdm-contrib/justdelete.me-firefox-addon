@@ -16,7 +16,7 @@ The extension icon will change depending on the difficulty, ranging from easy to
 ## For Chrome and Chromium
 
 Since this extension uses manifest v2, it is currently not compatible with Chromium-based browsers, but
-there is [already an extension for that](https://chrome.google.com/webstore/detail/just-delete-me/hfpofkfbabpbbmchmiekfnlcgaedbgcf) by Mike Rogers.
+there is [already an extension for that](https://github.com/fregante/jdm).
 
 ## Building
 
