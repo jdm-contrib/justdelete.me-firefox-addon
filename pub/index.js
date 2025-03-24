@@ -37,6 +37,12 @@ const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myacc
         return new URL(url).hostname;
     }
     
+    //convert markdown links such as:
+    // Delete your account [here](https://example.com/delete) to a valid HTML link.
+    function convertMarkdown(markdown) {
+        return markdown.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    }
+    
     browser.tabs.query({currentWindow: true, active: true}).then((tabs) => {
         try {
             let tab = tabs[0];
@@ -90,7 +96,7 @@ const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myacc
             const notes = searchForSite(base, "notes");
             
             if(notes)
-                document.getElementById("message").innerHTML = `Notes: ${notes}`;
+                document.getElementById("message").innerHTML = `${convertMarkdown(notes)}`;
             else
                 document.getElementById("message").innerText = `There are no notes for this website.`;
         } catch(e) {
