@@ -5,7 +5,7 @@ This extension provides details on how to delete your accounts for websites, alo
 
 The extension icon will change depending on the difficulty, ranging from easy to impossible.
 
-## Difficulties
+## Deletion Difficulties
 
 * Green (Easy) - Easy to delete your account (usually just by clicking a link and entering your password).
 * Yellow (Medium) - Moderately difficult (usually requires users to confirm their email before deleting their account).
@@ -16,15 +16,13 @@ The extension icon will change depending on the difficulty, ranging from easy to
 ## For Chrome and Chromium
 
 Since this extension uses manifest v2, it is currently not compatible with Chromium-based browsers, but
-there is [already an unnoficial extension for that](https://github.com/fregante/jdm).
+there is [already an unofficial extension for that](https://github.com/fregante/jdm).
 
-## Building
+## Building from Source
 
-First, make sure you have [NodeJS installed](https://nodejs.org) on your system, as you will
-need it to download the build tools.
+1. Install [Bun](https://bun.sh/) (the Node.JS replacement) for the build tools.
+2. Clone this repository: `git clone https://github.com/jdm-contrib/justdelete.me-firefox-addon`
+3. Enter the directory in your terminal and run `bun x web-ext build`
 
-Install web-ext through NPM: `npm i -g web-ext`
 
-Clone this repository: `git clone https://github.com/jdm-contrib/justdelete.me-firefox-addon`, then run `web-ext build`
-
-Install the .zip file that is generated in `web-ext-artifacts`
+Install the .zip file that is generated in `web-ext-artifacts` (you may need to disable code signing on Firefox to install, or use about:debugging).
