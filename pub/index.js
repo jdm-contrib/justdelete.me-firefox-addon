@@ -1,7 +1,4 @@
-
 const data_url = "https://raw.githubusercontent.com/jdm-contrib/jdm/master/_data/sites.json";
-
-const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myaccount', 'meta', 'help', 'support', 'edit'];
 
 (async () => {
     const json = await (await fetch(data_url)).json();
@@ -14,33 +11,34 @@ const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myacc
      * @returns {"easy" | "medium" | "hard" | "impossible" | "limited" | undefined} the difficulty, or undefined if there is none.
      */
     function searchForSite(domain, query = "difficulty") {
-        for(const site of json) {
-            if(!site.domains) {
+        for (const site of json) {
+            if (!site.domains) {
                 continue;
             }
-            
-            for(const dm of site.domains) {
-                if(domain === dm) {
+    
+            for (const dm of site.domains) {
+                if (domain === dm || domain.endsWith('.' + dm)) {
                     return site[query];
                 }
             }
         }
     }
+      
     
     function getHostname(url) {
+        const hostname = new URL(url).hostname;
         
-        // Quickly strip any odd subdomains off
-        for(let i = 0; i < subdomains.length; i++) {
-            url = url.replace('/' + subdomains[i] + '.', '/');
+        const parts = hostname.split('.');
+        if (parts.length > 2) {
+            return parts.slice(-2).join('.');
         }
-        
-        return new URL(url).hostname;
+        return hostname;
     }
     
     //convert markdown links such as:
     // Delete your account [here](https://example.com/delete) to a valid HTML link.
     function convertMarkdown(markdown) {
-        return markdown.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+        return markdown.replace(/$$([^$$]+)\]$(https?:\/\/[^\s)]+)$/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
     }
     
     browser.tabs.query({currentWindow: true, active: true}).then((tabs) => {
@@ -68,7 +66,6 @@ const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myacc
                     difficulty_string = `It is <b>easy</b> to delete your account for <b>${base}</b>!`;
                     break;
                 case "medium":
-                    //replace medium with moderately difficult
                     difficulty_string = `It is <b>moderately difficult</b> to delete your account for <b>${base}</b>!`;
                     break;
                 case "hard":
