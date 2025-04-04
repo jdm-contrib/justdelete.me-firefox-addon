@@ -43,14 +43,14 @@ const subdomains = ['www', 'support', 'mail', 'ssl', 'new', 'cgi1', 'en', 'myacc
      * @returns {string} the hostname.
      */
     function getHostname(url) {
-        
-        // Quickly strip any odd subdomains off
-        for(let i = 0; i < subdomains.length; i++) {
-            url = url.replace('/' + subdomains[i] + '.', '/');
+        const hostname = new URL(url).hostname;
+        const parts = hostname.split('.');
+        if (parts.length > 2) {
+            return parts.slice(-2).join('.');
         }
-        
-        return new URL(url).hostname;
+        return hostname;
     }
+    
     
     /**
      * Search for the site and return the difficulty
