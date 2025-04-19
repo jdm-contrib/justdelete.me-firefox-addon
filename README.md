@@ -11,7 +11,7 @@ The extension icon will change depending on the difficulty, ranging from easy to
 * Yellow (Medium) - Moderately difficult (usually requires users to confirm their email before deleting their account).
 * Red (Hard) - Hard to delete accounts (requires that you send an email to the service or fill out a request form).
 * Black (Impossible) - Websites which have this do not allow you to delete your account.
-* Cyan (Limited) - Data deletion rights vary by country.
+* Purple (Limited) - Data deletion rights vary by country.
 
 ## For Chrome and Chromium
 
