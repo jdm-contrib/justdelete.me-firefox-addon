@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "JustDeleteMe",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "icons": {
         "128": "res/ext_icon_144.png"
     },
@@ -13,7 +13,8 @@
     },
     "permissions": [
         "activeTab",
-        "<all_urls>"
+        "<all_urls>",
+        "webNavigation"
     ],
     "background": {
         "scripts": ["js/background.js"],

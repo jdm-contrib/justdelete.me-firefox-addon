@@ -55,6 +55,8 @@ const data_url = "https://raw.githubusercontent.com/jdm-contrib/jdm/master/_data
                 }
             }
         }
+
+        return undefined;
     }
     
     function onTabChange(tabId) {
@@ -63,7 +65,10 @@ const data_url = "https://raw.githubusercontent.com/jdm-contrib/jdm/master/_data
                 return setIcon("unknown", tab.windowId);
             }
             let hostname = getHostname(tab.url);
-            setIcon(searchForSite(hostname) || "unknown", tab.windowId);
+            const difficulty = searchForSite(hostname);
+            setIcon(difficulty || "unknown", tab.windowId);
+        }).catch((error) => {
+            console.error(`${error}`);
         });
     }
     
@@ -75,5 +80,17 @@ const data_url = "https://raw.githubusercontent.com/jdm-contrib/jdm/master/_data
         if (changeInfo.status === 'complete' && changeInfo.url) {
             onTabChange(tabId);
         }
-    });    
+    });
+
+    browser.tabs.onCreated.addListener((tab) => {
+        if (tab.url) {
+            onTabChange(tab.id);
+        }
+    });
+
+    browser.webNavigation.onCompleted.addListener((details) => {
+        if (details.frameId === 0) {
+            onTabChange(details.tabId);
+        }
+    });
 })();
