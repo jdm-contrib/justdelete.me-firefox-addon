@@ -15,11 +15,11 @@ The extension icon will change depending on the difficulty, ranging from easy to
 
 | Icon                                                                 | Difficulty | Description                                                                                      |
 |----------------------------------------------------------------------|------------|--------------------------------------------------------------------------------------------------|
-| ![Easy](https://raw.githubusercontent.com/jdm-contrib/justdelete.me-firefox-addon/refs/heads/master/res/icons/easy.png)         | Green (Easy)   | Easy to delete your account (usually just by clicking a link and entering your password).         |
-| ![Medium](https://raw.githubusercontent.com/jdm-contrib/justdelete.me-firefox-addon/refs/heads/master/res/icons/medium.png)     | Yellow (Medium)| Moderately difficult (usually requires users to confirm their email before deleting their account).|
-| ![Hard](https://raw.githubusercontent.com/jdm-contrib/justdelete.me-firefox-addon/refs/heads/master/res/icons/hard.png)         | Red (Hard)     | Hard to delete accounts (requires that you send an email to the service or fill out a request form).|
-| ![Impossible](https://raw.githubusercontent.com/jdm-contrib/justdelete.me-firefox-addon/refs/heads/master/res/icons/impossible.png) | Black (Impossible)| Websites which have this do not allow you to delete your account.                               |
-| ![Limited](https://raw.githubusercontent.com/jdm-contrib/justdelete.me-firefox-addon/refs/heads/master/res/icons/limited.png)   | Purple (Limited)| Data deletion rights vary by country.                                                            |
+| ![Easy](https://raw.githubusercontent.com/jdm-contrib/justdelete.me-firefox-addon/refs/heads/master/res/icons/easy.png)         | Easy   | Easy to delete your account (usually just by clicking a link and entering your password).         |
+| ![Medium](https://raw.githubusercontent.com/jdm-contrib/justdelete.me-firefox-addon/refs/heads/master/res/icons/medium.png)     | Medium | Moderately difficult (usually requires users to confirm their email before deleting their account).|
+| ![Hard](https://raw.githubusercontent.com/jdm-contrib/justdelete.me-firefox-addon/refs/heads/master/res/icons/hard.png)         | Hard  | Hard to delete accounts (requires that you send an email to the service or fill out a request form).|
+| ![Impossible](https://raw.githubusercontent.com/jdm-contrib/justdelete.me-firefox-addon/refs/heads/master/res/icons/impossible.png) | Impossible | Websites which have this do not allow you to delete your account.                               |
+| ![Limited](https://raw.githubusercontent.com/jdm-contrib/justdelete.me-firefox-addon/refs/heads/master/res/icons/limited.png)   | Limited | Data deletion rights vary by country. |
 
 
 ## For Chrome and Chromium
