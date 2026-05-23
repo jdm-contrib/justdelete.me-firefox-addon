@@ -39,6 +39,11 @@ const data_url = "https://raw.githubusercontent.com/jdm-contrib/jdm/master/_data
         return markdown.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
     }
    
+    document.getElementById("home-link").addEventListener("click", (e) => {
+        e.preventDefault();
+        browser.tabs.create({ url: "https://justdeleteme.xyz" });
+    });
+    
     browser.tabs.query({currentWindow: true, active: true}).then((tabs) => {
         try {
             let tab = tabs[0];
